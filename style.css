@@ -1,0 +1,193 @@
+:root {
+    --primary: #1e3a8a;
+    --text: #1a1a1a;
+    --text-light: #666;
+    --safe-top: env(safe-area-inset-top);
+    --safe-bottom: env(safe-area-inset-bottom);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #ffffff;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+/* ===== ВИЗИТКА ===== */
+
+.card {
+    height: 100dvh;
+    padding: calc(var(--safe-top) + 16px) 20px calc(var(--safe-bottom) + 16px);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    background: linear-gradient(
+        to right,
+        #f19997 0%,
+        #ffffff 15%,
+        #ffffff 85%,
+        #8fb6d9 100%
+    );
+}
+
+/* ===== ЛОГО ===== */
+
+.logo-wrapper {
+    margin-bottom: 14px;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+}
+
+/* ===== ФОТО ===== */
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 22px;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 4px solid var(--primary);
+}
+
+/* ===== ТЕКСТ ===== */
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: var(--text);
+}
+
+.job-title {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+/* ===== ССЫЛКИ ===== */
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    flex: 1;
+    justify-content: center;
+}
+
+/* === Соцсети в ряд === */
+
+.social-row {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.social-btn {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.social-btn img {
+    width: 28px;
+    height: 28px;
+}
+
+.social-btn:active {
+    transform: scale(0.95);
+}
+
+.telegram {
+    background: #5a8fb5;
+}
+
+.whatsapp {
+    background: #5cb87c;
+}
+
+.max {
+    background: #8b5cf6;
+}
+
+/* === Кнопка сайта === */
+
+.link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.link-btn:active {
+    transform: scale(0.97);
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.secondary {
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+/* ===== EMAIL ===== */
+
+.email {
+    margin-top: 16px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(30,136,229,0.1);
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+/* ===== ДЕСКТОП ===== */
+
+@media (min-width: 768px) {
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .card {
+        max-width: 460px;
+        height: auto;
+        border-radius: 28px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    body {
+        overflow: auto;
+    }
+}
